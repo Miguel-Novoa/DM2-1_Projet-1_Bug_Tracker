@@ -1,0 +1,35 @@
+main{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding-top: 4rem;
+    row-gap: 4rem;
+}
+
+.table{
+    width: 80%;
+    background-color: var(--secondary-color);
+    border-bottom: 2px solid var(--main-color);
+}
+
+.table thead th, .table tbody th, .table tbody td{
+    border-bottom: 2px solid var(--main-color);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.table thead th{
+    color: var(--main-color);
+}
+
+.largeCells{
+    width: 35%;
+}
+
+.mediumCells{
+    width: 15%;
+}
+
+.littleCells{
+    width: 3%;
+}

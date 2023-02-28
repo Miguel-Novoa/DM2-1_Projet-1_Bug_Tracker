@@ -2,7 +2,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 8rem;
+    padding-top: 5rem;
 }
 
 #loginBox{
@@ -39,6 +39,10 @@ main{
 
 #loginForm input{
     border: 1px solid var(--main-color);
+}
+
+#passwordAlert, #confirmPasswordAlert{
+    display: none;
 }
 
 .input, .select select, .textarea{

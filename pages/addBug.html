@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/style/reset.min.css">
     <link rel="stylesheet" href="/node_modules/bulma/css/bulma.min.css">
     <link rel="stylesheet" href="/style/main.min.css">
-    <link rel="stylesheet" href="/style/bugsList.min.css">
+    <link rel="stylesheet" href="/style/addBug.min.css">
     <title>Bug Tracker</title>
 </head>
 <body>
@@ -25,7 +25,14 @@
         </nav>
     </header>
     <main>
-        
+        <h2>Signaler un bug</h2>
+        <form action="post">
+            <label for="titleInput">Titre</label>
+            <input class="input" type="text" id="titleInput" placeholder="Titre">
+            <label for="bugDesignation">Description</label>
+            <textarea class="textarea is-medium" placeholder="Description"></textarea>
+            <button type="submit">Sauvegarder</button>
+        </form>
     </main>
 </body>
 </html>

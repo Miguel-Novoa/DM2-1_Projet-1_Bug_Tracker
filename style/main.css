@@ -64,6 +64,10 @@ header nav a p{
     font-size: 1.2rem;
 }
 
+header nav a img{
+    width: 2rem;
+}
+
 .current{
     background-color: var(--current-color);
     color: var(--secondary-color);
@@ -71,4 +75,10 @@ header nav a p{
 
 .current:hover{
     color: var(--secondary-color);
+}
+
+main h2{
+    font-size: 2rem;
+    font-weight: bolder;
+    color: var(--main-color);
 }
