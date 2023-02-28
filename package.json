@@ -1,0 +1,14 @@
+{
+  "name": "dm2-1_projet-1_bug_tracker",
+  "version": "1.0.0",
+  "description": "Premier projet de la formation développeur multimedia à l'Ecole Multimedia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "BManta",
+  "license": "MIT",
+  "dependencies": {
+    "bulma": "^0.9.4"
+  }
+}
