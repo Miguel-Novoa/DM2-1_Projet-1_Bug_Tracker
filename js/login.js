@@ -13,10 +13,10 @@ loginBtn.addEventListener('click', ()=>{
     .then((res)=>res.json())
     .then((response)=>{
         if(response.result.status === 'done'){
-            localStorage.setItem('user', {
+            localStorage.setItem('user', JSON.stringify({
                 "id" : response.result.id,
                 "token" : response.result.token
-            });
+            }));
 
             window.location.href = `${url}/pages/bugsList.html`;
 
