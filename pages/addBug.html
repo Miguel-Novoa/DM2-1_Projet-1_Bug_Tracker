@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/reset.min.css">
-    <link rel="stylesheet" href="/node_modules/bulma/css/bulma.min.css">
-    <link rel="stylesheet" href="/style/main.min.css">
-    <link rel="stylesheet" href="/style/addBug.min.css">
+    <link rel="stylesheet" href="../style/reset.min.css">
+    <link rel="stylesheet" href="../node_modules/bulma/css/bulma.min.css">
+    <link rel="stylesheet" href="../style/main.min.css">
+    <link rel="stylesheet" href="../style/addBug.min.css">
     <title>Bug Tracker</title>
 </head>
 <body>
     <header>
         <ul>
-            <li><img src="/assets/bug.png" alt="bug tracker logo"></li>
+            <li><img src="../assets/bug.png" alt="bug tracker logo"></li>
             <li><h1>Bug Tracker</h1></li>
         </ul>
 
         <nav>
-            <a class="navItem" href="/pages/bugsList.html"><p>Liste complete</p></a>
-            <a class="navItem" href="/pages/todo.html"><p>A traiter</p></a>
+            <a class="navItem" href="./bugsList.html"><p>Liste complete</p></a>
+            <a class="navItem" href="./todo.html"><p>A traiter</p></a>
             <a class="current"><p>Ajouter</p></a>
-            <a class="navItem" href="/index.html"><p>❌</p></a>
+            <a class="navItem" href="../index.html" id="logout"><img src="../assets/logout.png" alt="logout logo"></a>
         </nav>
     </header>
     <main>
@@ -34,5 +34,6 @@
             <button type="submit">Sauvegarder</button>
         </form>
     </main>
+    <script src="../js/addBug.js" type="module"></script>
 </body>
 </html>
