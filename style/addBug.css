@@ -28,3 +28,7 @@ form button:hover{
     color: var(--main-color);
     background-color: var(--secondary-color);
 }
+
+#titleAlert, #descriptionAlert{
+    display: none;
+}

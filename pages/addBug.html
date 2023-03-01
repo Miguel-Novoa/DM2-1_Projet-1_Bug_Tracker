@@ -31,14 +31,17 @@
     </header>
     <main>
         <h2>Signaler un bug</h2>
-        <form action="post">
+        <form>
             <label for="titleInput">Titre</label>
             <input class="input" type="text" id="titleInput" placeholder="Titre">
+            <p id="titleAlert" class="help is-danger">Veuillez ajouter un titre !</p>
             <label for="bugDesignation">Description</label>
-            <textarea class="textarea is-medium" placeholder="Description"></textarea>
-            <button type="submit">Sauvegarder</button>
+            <textarea class="textarea is-medium" placeholder="Description" id="descriptionInput"></textarea>
+            <p id="descriptionAlert" class="help is-danger">Veuillez ajouter une description !</p>
+            <button id="saveBtn" type="button">Sauvegarder</button>
         </form>
     </main>
+    <script src="../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
     <script src="../js/addBug.js" type="module"></script>
 </body>
 </html>

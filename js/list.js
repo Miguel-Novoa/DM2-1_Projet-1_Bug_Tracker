@@ -70,6 +70,9 @@ const displayTable = ()=>{
             </tr>
             `
         }
+    })
+    .catch((error)=>{
+        console.log(error)
     });
 };
 
@@ -86,3 +89,6 @@ fetch(`http://greenvelvet.alwaysdata.net/bugTracker/api/users/${user.token}`)
 }).then(()=>{
     displayTable();
 })
+.catch((error)=>{
+    console.log(error)
+});
