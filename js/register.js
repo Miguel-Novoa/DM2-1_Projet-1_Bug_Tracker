@@ -8,7 +8,7 @@ let passwordAlert = document.getElementById('passwordAlert');
 let confirmPasswordAlert = document.getElementById('confirmPasswordAlert');
 let usernameAlert = document.getElementById('usernameAlert');
 
-let checkPasswords = (pass1, pass2) =>{
+const checkPasswords = (pass1, pass2) =>{
     if(pass1 == ''){
         passwordAlert.innerHTML = 'Veuillez entrer un mot de passe !';
         passwordAlert.style.display = 'block';
@@ -24,7 +24,7 @@ let checkPasswords = (pass1, pass2) =>{
     };
 };
 
-let checkUsername = (userValue, pass) =>{
+const checkUsername = (userValue, pass) =>{
     fetch(`http://greenvelvet.alwaysdata.net/bugTracker/api/signup/${userValue}/${pass}`)
     .then((res) => res.json())
     .then((response) =>{
@@ -48,7 +48,7 @@ let checkUsername = (userValue, pass) =>{
 subscribeBtn.addEventListener('click', ()=>{
     passwordAlert.style.display = 'none';
     confirmPasswordAlert.style.display = 'none';
-    username.style.display = 'none';
+    usernameAlert.style.display = 'none';
 
     if(checkPasswords(password.value, confirmPassword.value)){
         checkUsername(username.value, password.value)

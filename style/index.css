@@ -41,7 +41,7 @@ main{
     border: 1px solid var(--main-color);
 }
 
-#passwordAlert, #confirmPasswordAlert, #usernameAlert{
+#passwordAlert, #confirmPasswordAlert, #usernameAlert, #alert{
     display: none;
 }
 
