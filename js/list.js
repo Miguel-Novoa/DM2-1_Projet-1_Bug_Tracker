@@ -1,4 +1,5 @@
 //import { checkLogged } from "./checkLogged.js";
+import { changeBugState } from "./changeBugState.js";
 import { logout } from "./logout.js";
 
 const url = 'http://127.0.0.1:5500';
@@ -12,7 +13,6 @@ let devs;
 //checkLogged(user, url);
 logout(logoutBtn, url);
 
-console.log(user)
 
 const manageBugState = (state)=>{
     if(state === "0"){
@@ -49,10 +49,8 @@ const displayTable = ()=>{
     fetch(`http://greenvelvet.alwaysdata.net/bugTracker/api/list/${user.token}/${locationHandler()}`)
     .then((res)=>res.json())
     .then((response) =>{
-        console.log(response)
-
         let bugs = response.result.bug;
-
+        
         for(let i=0; i<bugs.length; i++){
             table.innerHTML += `
             <tr>
@@ -60,7 +58,7 @@ const displayTable = ()=>{
                 <th class="mediumCells">${convertTimestampToDate(bugs[i].timestamp)}</th>
                 <th class="mediumCells">${devs[bugs[i].user_id]}</th>
                 <th class="mediumCells">
-                    <select>
+                    <select class='select' id='${bugs[i].id}'>
                         ${manageBugState(bugs[i].state)}
                     </select>
                 </th>
@@ -70,6 +68,11 @@ const displayTable = ()=>{
             </tr>
             `
         }
+
+        let select = document.querySelectorAll('.select');
+        select.forEach(el => el.addEventListener('change', ()=>{
+            changeBugState(user.token, el.id, el.value);
+        }));
     })
     .catch((error)=>{
         console.log(error)
@@ -86,7 +89,8 @@ fetch(`http://greenvelvet.alwaysdata.net/bugTracker/api/users/${user.token}`)
     }else{
         title.innerHTML = `Liste des bugs à corriger par ${devs[user.id]}`;
     }
-}).then(()=>{
+})
+.then(()=>{
     displayTable();
 })
 .catch((error)=>{
