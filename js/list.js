@@ -1,5 +1,6 @@
 //import { checkLogged } from "./checkLogged.js";
 import { changeBugState } from "./changeBugState.js";
+import { deleteBug } from "./deleteBug.js";
 import { logout } from "./logout.js";
 
 const url = 'http://127.0.0.1:5500';
@@ -63,15 +64,21 @@ const displayTable = ()=>{
                     </select>
                 </th>
                 <td class="littleCells">
-                    <button>❌</button>
+                    <button id='${bugs[i].id}Btn' class='delete'>❌</button>
                 </td>
             </tr>
             `
         }
 
         let select = document.querySelectorAll('.select');
+        let deleteBtns = document.querySelectorAll('.delete');
+
         select.forEach(el => el.addEventListener('change', ()=>{
             changeBugState(user.token, el.id, el.value);
+        }));
+
+        deleteBtns.forEach(el => el.addEventListener('click', ()=>{
+            deleteBug(user.token, el.id.replace('Btn', ''));
         }));
     })
     .catch((error)=>{
