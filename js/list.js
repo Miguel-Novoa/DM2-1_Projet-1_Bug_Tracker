@@ -78,7 +78,16 @@ const displayTable = ()=>{
         }));
 
         deleteBtns.forEach(el => el.addEventListener('click', ()=>{
-            deleteBug(user.token, el.id.replace('Btn', ''));
+            Swal.fire({
+                title: 'Voulez-vous supprimer définitivement ce bug ?',
+                showDenyButton: true,
+                confirmButtonText: 'Confirmer',
+                denyButtonText: `Annuler`,
+              }).then((result) => {
+                if (result.isConfirmed) {
+                    deleteBug(user.token, el.id.replace('Btn', ''));
+                }
+              });
         }));
     })
     .catch((error)=>{
