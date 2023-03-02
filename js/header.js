@@ -33,4 +33,6 @@ fetch(`http://greenvelvet.alwaysdata.net/bugTracker/api/list/${user.token}/0`)
                     <li>${uncovered} non traités</li>
                     <li>${inProgress} en cours</li>
                     <li>${covered} traitrés</li>`
-})
+}).catch((error)=>{
+    console.log(error)
+});
