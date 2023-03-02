@@ -15,7 +15,7 @@ let devs;
 logout(logoutBtn, url);
 
 
-const manageBugState = (state)=>{
+const manageBugState = (state, name)=>{
     if(state === "0"){
         return `<option selected value='0'>Non traité</option>
                     <option value='1'>En cours</option>
@@ -46,6 +46,14 @@ const locationHandler = () =>{
     }
 }
 
+const displayNames = (name) =>{
+    if(locationHandler() === 0){
+        return `<th class="mediumCells name">${name}</th>`;
+    }else{
+        return '';
+    };
+};
+
 const displayTable = ()=>{
     fetch(`http://greenvelvet.alwaysdata.net/bugTracker/api/list/${user.token}/${locationHandler()}`)
     .then((res)=>res.json())
@@ -57,7 +65,7 @@ const displayTable = ()=>{
             <tr>
                 <th class="largeCells">${bugs[i].title + ' ' + bugs[i].description}</th>
                 <th class="mediumCells">${convertTimestampToDate(bugs[i].timestamp)}</th>
-                <th class="mediumCells">${devs[bugs[i].user_id]}</th>
+                ${displayNames(devs[bugs[i].user_id])}
                 <th class="mediumCells">
                     <select class='select' id='${bugs[i].id}'>
                         ${manageBugState(bugs[i].state)}
@@ -69,7 +77,7 @@ const displayTable = ()=>{
             </tr>
             `
         }
-
+    }).then(()=>{
         let select = document.querySelectorAll('.select');
         let deleteBtns = document.querySelectorAll('.delete');
 
@@ -88,7 +96,7 @@ const displayTable = ()=>{
                     deleteBug(user.token, el.id.replace('Btn', ''));
                 }
               });
-        }));
+        }));       
     })
     .catch((error)=>{
         console.log(error)
