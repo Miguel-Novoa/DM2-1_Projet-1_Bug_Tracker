@@ -1,7 +1,5 @@
-//import { checkLogged } from "./checkLogged.js";
 import { changeBugState } from "./changeBugState.js";
 import { deleteBug } from "./deleteBug.js";
-import { logout } from "./logout.js";
 
 const url = 'http://127.0.0.1:5500';
 const user = JSON.parse(localStorage.getItem('user'));
@@ -10,9 +8,6 @@ const table = document.querySelector('tbody');
 const title = document.getElementById('tableTitle');
 
 let devs;
-
-//checkLogged(user, url);
-logout(logoutBtn, url);
 
 
 const manageBugState = (state, name)=>{

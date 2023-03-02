@@ -1,6 +1,3 @@
-//import { checkLogged } from "./checkLogged.js";
-import { logout } from "./logout.js";
-
 const url = 'http://127.0.0.1:5500';
 const user = JSON.parse(localStorage.getItem('user'));
 const logoutBtn = document.getElementById('logout');
@@ -10,8 +7,6 @@ const btn = document.getElementById('saveBtn');
 const titleAlert = document.getElementById('titleAlert');
 const descriptionAlert = document.getElementById('descriptionAlert');
 
-//checkLogged(user, url);
-logout(logoutBtn, url);
 
 const postBug = () =>{
     fetch(`http://greenvelvet.alwaysdata.net/bugTracker/api/add/${user.token}/${user.id}`,{
