@@ -3,7 +3,6 @@ import { deleteBug } from "./deleteBug.js";
 
 const url = 'http://127.0.0.1:5500';
 const user = JSON.parse(localStorage.getItem('user'));
-const logoutBtn = document.getElementById('logout');
 const table = document.querySelector('tbody');
 const title = document.getElementById('tableTitle');
 

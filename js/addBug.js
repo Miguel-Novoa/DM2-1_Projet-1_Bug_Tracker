@@ -1,6 +1,5 @@
 const url = 'http://127.0.0.1:5500';
 const user = JSON.parse(localStorage.getItem('user'));
-const logoutBtn = document.getElementById('logout');
 const title = document.getElementById('titleInput');
 const description = document.getElementById('descriptionInput');
 const btn = document.getElementById('saveBtn');
