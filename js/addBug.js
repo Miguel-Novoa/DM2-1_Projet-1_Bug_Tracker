@@ -32,9 +32,10 @@ const postBug = () =>{
     });
 };
 
-btn.addEventListener('click', ()=>{
+btn.addEventListener('click', (e)=>{
     titleAlert.style.display = 'none';
     descriptionAlert.style.display = 'none';
+    e.preventDefault();
 
     if(title.value === ''){
         titleAlert.style.display = 'block';

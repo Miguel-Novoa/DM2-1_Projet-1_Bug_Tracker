@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon_io/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicon_io/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./assets/favicon_io/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" type="image/png" href="./assets/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="./assets/favicon_io/site.webmanifest">
     <link rel="stylesheet" href="./style/reset.min.css">
-
-        <!--ajout temporaire lien bulma-->
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-
     <link rel="stylesheet" href="./node_modules/bulma/css/bulma.min.css">
     <link rel="stylesheet" href="./style/main.min.css">
     <link rel="stylesheet" href="./style/index.min.css">
@@ -26,7 +28,7 @@
         <section aria-labelledby="loginTitle" id="loginBox">
             <fieldset>
                 <legend id="loginTitle">Se connecter</legend>
-                <form id="loginForm" action="get">
+                <form id="loginForm" action="post">
                     <p>
                         <label for="username">Nom d'utilisateur</label>
                         <input id="username" class="input" type="text" placeholder="Nom d'utilisateur...">
@@ -39,11 +41,10 @@
 
                     <p id="alert" class="help is-danger"></p>
                     
-                    <input id="loginBtn" class="button" value="Se connecter">
+                    <input id="loginBtn" class="button" type="submit" value="Se connecter">
                 </form> 
             </fieldset> 
             <a href="./pages/register.html">S'inscrire</a>
-            <a href="./pages/bugsList.html">lien temporaire liste</a>
         </section>
     </main>
     <script src="./js/login.js"></script>

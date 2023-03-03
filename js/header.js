@@ -1,4 +1,4 @@
-//import { checkLogged } from "./checkLogged.js";
+import { checkLogged } from "./checkLogged.js";
 import { logout } from "./logout.js";
 
 const ul = document.querySelector('#headerList');
@@ -7,6 +7,7 @@ const logoutBtn = document.getElementById('logout');
 const url = 'http://127.0.0.1:5500';
 
 logout(logoutBtn, url);
+checkLogged(user, url);
 
 fetch(`http://greenvelvet.alwaysdata.net/bugTracker/api/list/${user.token}/0`)
 .then((res)=>res.json())
@@ -35,4 +36,34 @@ fetch(`http://greenvelvet.alwaysdata.net/bugTracker/api/list/${user.token}/0`)
                     <li>${covered} traitrés</li>`
 }).catch((error)=>{
     console.log(error)
+});
+
+
+window.addEventListener('resize', function (e) {
+    let burger = document.getElementById('burger');
+    let nav = document.querySelector('nav');
+    let back = document.getElementById('back');
+
+    if (document.body.clientWidth < 890) {
+        burger.style.display = 'block';
+        nav.style.display = 'none';
+
+        burger.addEventListener('click', () => {
+            burger.style.display = 'none';
+            nav.classList.add('mobileNav');
+            nav.style.display = 'flex';
+            back.style.display = 'block';
+        });
+
+        back.addEventListener('click', () => {
+            burger.style.display = 'block';
+            nav.style.display = 'none';
+            back.style.display = 'none';
+            nav.classList.remove('mobileNav');
+        });
+    } else if (document.body.clientWidth > 890) {
+        burger.style.display = 'none';
+        nav.style.display = 'flex';
+        back.style.display = 'none';
+    }
 });

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 :root{
     --main-color : #006d77;
@@ -12,6 +13,7 @@ html{
 body{
     background-color: var(--secondary-color);
     min-height: 100%;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 header{

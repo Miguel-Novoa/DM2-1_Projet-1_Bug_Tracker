@@ -45,11 +45,13 @@ const checkUsername = (userValue, pass) =>{
     });
 };
 
-subscribeBtn.addEventListener('click', ()=>{
+subscribeBtn.addEventListener('click', (e)=>{
     passwordAlert.style.display = 'none';
     confirmPasswordAlert.style.display = 'none';
     usernameAlert.style.display = 'none';
 
+    e.preventDefault();
+    
     if(checkPasswords(password.value, confirmPassword.value)){
         checkUsername(username.value, password.value)
     };

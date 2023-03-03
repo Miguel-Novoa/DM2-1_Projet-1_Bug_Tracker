@@ -6,8 +6,9 @@ const password = document.getElementById('password');
 const alert = document.getElementById('alert');
 
 
-loginBtn.addEventListener('click', ()=>{
+loginBtn.addEventListener('click', (e)=>{
     alert.style.display = 'none';
+    e.preventDefault();
     
     fetch(`http://greenvelvet.alwaysdata.net/bugTracker/api/login/${username.value}/${password.value}`)
     .then((res)=>res.json())

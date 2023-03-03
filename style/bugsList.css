@@ -17,6 +17,7 @@ main{
     border-bottom: 2px solid var(--main-color);
     padding-top: 1rem;
     padding-bottom: 1rem;
+    max-width: 35%;
 }
 
 .table thead th{
