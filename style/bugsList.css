@@ -2,8 +2,9 @@ main{
     display: flex;
     flex-flow: column;
     align-items: center;
-    padding-top: 4rem;
+    padding-top: 6rem;
     row-gap: 4rem;
+    padding-bottom: 4rem;
 }
 
 .table{
@@ -23,7 +24,8 @@ main{
 }
 
 .largeCells{
-    width: 35%;
+    max-width: 35%;
+    height: auto;
 }
 
 .mediumCells{
@@ -32,4 +34,10 @@ main{
 
 .littleCells{
     width: 3%;
+}
+
+select{
+    background-color: var(--secondary-color);
+    border: 2px solid var(--main-color);
+    border-radius: 0.2rem;
 }

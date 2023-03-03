@@ -3,7 +3,7 @@ main{
     flex-flow: column;
     width: 100%;
     align-items: center;
-    padding-top: 4rem;
+    padding-top: 6rem;
     row-gap: 4rem;
 }
 
@@ -50,11 +50,13 @@ form button{
     border: none;
     height: 2rem;
     align-self: center;
+    cursor: pointer;
 }
 
 form button:hover{
     color: var(--main-color);
     background-color: var(--secondary-color);
+    border: 2px solid var(--main-color);
 }
 
 #titleAlert, #descriptionAlert{

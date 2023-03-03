@@ -66,14 +66,14 @@ const displayTable = ()=>{
                     </select>
                 </th>
                 <td class="littleCells">
-                    <button id='${bugs[i].id}Btn' class='delete'>❌</button>
+                    <button id='${bugs[i].id}Btn' class="button deleteBtn is-danger">X</button>
                 </td>
             </tr>
             `
         }
     }).then(()=>{
         let select = document.querySelectorAll('.select');
-        let deleteBtns = document.querySelectorAll('.delete');
+        let deleteBtns = document.querySelectorAll('.deleteBtn');
 
         select.forEach(el => el.addEventListener('change', ()=>{
             changeBugState(user.token, el.id, el.value);
