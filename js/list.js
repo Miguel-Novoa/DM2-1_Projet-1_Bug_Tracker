@@ -26,19 +26,17 @@ const manageBugState = (state, name)=>{
 };
 
 const convertTimestampToDate = (time) =>{
-    let completeDate = new Date(time);
-    let shortDate = completeDate.getDate() + '/' + (completeDate.getMonth()+1) + '/' + completeDate.getFullYear();
     console.log(time)
-    return shortDate;
-}
+    return new Date(time).toLocaleDateString('fr-fr');
+};
 
 const locationHandler = () =>{
     if(window.location.href === `${url}/pages/bugsList.html`){
         return 0;
     }else if(window.location.href === `${url}/pages/todo.html`){
         return user.id;
-    }
-}
+    };
+};
 
 const displayNames = (name) =>{
     if(locationHandler() === 0){

@@ -16,17 +16,21 @@
 </head>
 <body>
     <header>
-        <ul id="headerList">
+        <ul>
             <li><img src="../assets/bug.png" alt="bug tracker logo"></li>
             <li><h1>Bug Tracker</h1></li>
         </ul>
-
+        <ul id="headerList">
+            
+        </ul>
         <nav>
             <a class="navItem" href="./bugsList.html"><p>Liste complete</p></a>
             <a class="current"><p>A traiter</p></a>
             <a class="navItem" href="./addBug.html"><p>Ajouter</p></a>
             <a class="navItem" href="../index.html" id="logout"><img src="../assets/logout.png" alt="logout logo"></a>
         </nav>
+        <span id="burger" class="burger">≡</span>
+        <span id="back" class="back">X</span>
     </header>
     <main>
         <h2 id="tableTitle"></h2>
@@ -46,6 +50,7 @@
     </main>
     <script src="../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
     <script src="../js/header.js" type="module"></script>
+    <script src="../js/burger.js"></script>
     <script src="../js/list.js" type="module"></script>
 </body>
 </html>

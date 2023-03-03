@@ -69,6 +69,7 @@ header nav a{
 
 header nav a p{
     font-size: 1.2rem;
+    font-weight: bold;
 }
 
 header nav a img{
@@ -82,6 +83,42 @@ header nav a img{
 
 .current:hover{
     color: var(--secondary-color);
+}
+
+#burger{
+    display: none;
+    font-size: 3rem;
+    padding-right: 1rem;
+    cursor: pointer;
+    padding-bottom: 1rem;
+}
+
+#back{
+    display: none;
+    font-size: 2rem;
+    padding-right: 1rem;
+    cursor: pointer;
+}
+
+.mobileNav {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 4rem;
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    height: auto;
+    row-gap: 1rem;
+}
+
+.mobileNav a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
 }
 
 main h2{
@@ -99,4 +136,202 @@ main h2{
 .swal2-styled.swal2-deny{
     background-color: #f14668;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) and (min-width: 880px){       
+    header{
+        font-size: 0.8rem;
+    }
+    
+    header ul li img{
+        width: 2rem;
+    }
+    
+    header h1{
+        font-size: 1.2rem;
+    }
+    
+    header nav a p{
+        font-size: 1rem;
+    }
+    
+    header nav a img{
+        width: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 880px) and (min-width: 740px){
+    header{
+        font-size: 0.8rem;
+    }
+    
+    header ul li img{
+        width: 2rem;
+    }
+    
+    header h1{
+        font-size: 1.2rem;
+    }
+    
+    header nav a p{
+        font-size: 1rem;
+    }
+    
+    header nav a img{
+        width: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 740px) and (min-width: 630px){
+    header{
+        font-size: 0.7rem;
+    }
+    
+    header ul li img{
+        width: 1.8rem;
+    }
+    
+    header h1{
+        font-size: 1rem;
+    }
+    
+    header nav a p{
+        font-size: 0.8rem;
+    }
+    
+    header nav a img{
+        width: 1.4rem;
+    }
+
+    main h2{
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 630px) and (min-width: 600px){
+    header{
+        font-size: 0.6rem;
+    }
+
+    header nav a{
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+    }
+    
+    header ul li img{
+        width: 1.8rem;
+    }
+    
+    header h1{
+        font-size: 1rem;
+    }
+    
+    header nav a p{
+        font-size: 0.8rem;
+    }
+    
+    header nav a img{
+        width: 1.4rem;
+    }
+
+    main h2{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) and (min-width: 530px){
+    header{
+        font-size: 0.6rem;
+    }
+
+    header nav a{
+        padding-left: 0.4rem;
+        padding-right: 0.4rem;
+    }
+
+    header ul li img{
+        width: 1.8rem;
+    }
+    
+    header h1{
+        font-size: 1rem;
+    }
+    
+    header nav a p{
+        font-size: 0.7rem;
+    }
+    
+    header nav a img{
+        width: 1.4rem;
+    }
+
+    main h2{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 530px) and (min-width: 460px){
+    header{
+        font-size: 0.6rem;
+    }
+
+    header nav a{
+        padding-left: 0.4rem;
+        padding-right: 0.4rem;
+    }
+
+    header ul li img{
+        width: 1.8rem;
+    }
+    
+    header h1{
+        font-size: 1rem;
+    }
+    
+    header nav a p{
+        font-size: 0.7rem;
+    }
+    
+    header nav a img{
+        width: 1.4rem;
+    }
+    main h2{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 460px){
+    header{
+        font-size: 0.6rem;
+    }
+
+    header nav a{
+        padding-left: 0.4rem;
+        padding-right: 0.4rem;
+    }
+
+    header ul li img{
+        width: 1.8rem;
+    }
+    
+    header h1{
+        font-size: 1rem;
+    }
+    
+    header nav a p{
+        font-size: 0.7rem;
+    }
+    
+    header nav a img{
+        width: 1.4rem;
+    }
+
+    #headerList{
+        flex-flow: column;
+        align-items: flex-start;
+    }
+
+    main h2{
+        font-size: 1rem;
+    }
 }

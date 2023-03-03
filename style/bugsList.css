@@ -41,3 +41,80 @@ select{
     border: 2px solid var(--main-color);
     border-radius: 0.2rem;
 }
+
+@media screen and (max-width: 780px) and (min-width: 700px){
+    
+    .table{
+        width: 90%;
+    }
+    
+    .table thead th, .table tbody th, .table tbody td{
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 700px) and (min-width: 590px){
+    .table{
+        width: 90%;
+    }
+    
+    .table thead th, .table tbody th, .table tbody td{
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 590px) and (min-width: 410px){
+    .table{
+        width: 80%;
+    }
+    
+    .table thead th, .table tbody th, .table tbody td{
+        font-size: 0.7rem;
+    }
+
+    .largeCells{
+        max-width: 25%;
+        height: auto;
+    }
+
+    .mediumCells{
+        width: 8%;
+    }  
+
+    .deleteBtn{
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    select{
+        width: 4rem;
+    }
+}
+
+@media screen and (max-width: 410px){
+    .table{
+        width: 80%;
+    }
+    
+    .table thead th, .table tbody th, .table tbody td{
+        font-size: 0.6rem;
+    }
+
+    .largeCells{
+        max-width: 25%;
+        height: auto;
+    }
+
+    .mediumCells{
+        width: 8%;
+    }  
+
+    .deleteBtn{
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    select{
+        width: 4rem;
+    }
+}
