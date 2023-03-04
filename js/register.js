@@ -1,5 +1,3 @@
-const url = 'http://127.0.0.1:5500';
-
 let subscribeBtn = document.getElementById('subscribeBtn');
 let username = document.getElementById('usernameInput');
 let password = document.getElementById('passwordInput');
@@ -36,7 +34,7 @@ const checkUsername = (userValue, pass) =>{
                 'Vous êtes désormais inscrit !',
                 'success'
             ).then(()=>{
-                window.location.href = `${url}/index.html`;
+                window.location.href = `/index.html`;
             });
         };
     })

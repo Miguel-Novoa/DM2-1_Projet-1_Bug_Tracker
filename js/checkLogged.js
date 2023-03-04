@@ -1,5 +1,5 @@
-export function checkLogged(user, url){
+export function checkLogged(user){
     if(user === null){
-        window.location.href = `${url}/pages/404.html`;
+        window.location.href = `/pages/404.html`;
     };
 };

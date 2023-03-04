@@ -4,15 +4,13 @@ import { logout } from "./logout.js";
 const ul = document.querySelector('#headerList');
 const user = JSON.parse(localStorage.getItem('user'));
 const logoutBtn = document.getElementById('logout');
-const url = 'http://127.0.0.1:5500';
 
-logout(logoutBtn, url);
-checkLogged(user, url);
+logout(logoutBtn);
+checkLogged(user);
 
 fetch(`http://greenvelvet.alwaysdata.net/bugTracker/api/list/${user.token}/0`)
 .then((res)=>res.json())
 .then((response) =>{
-    console.log(response)
     let bugs = response.result.bug;
     let covered = 0;
     let inProgress = 0;

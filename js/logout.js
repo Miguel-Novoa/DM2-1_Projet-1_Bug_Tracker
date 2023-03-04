@@ -1,6 +1,6 @@
-export function logout(btn, url){
+export function logout(btn){
     btn.addEventListener('click', ()=>{
         localStorage.removeItem('user');
-        window.location.href = `${url}/index.html`;
+        window.location.href = `/index.html`;
     });
 };

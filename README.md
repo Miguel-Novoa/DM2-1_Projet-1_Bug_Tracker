@@ -3,9 +3,9 @@
 
 Avant de lancer votre serveur local, il faut installer les dépendances. Pour se faire, ouvrez votre terminal à la racine du projet et entrez la commande :
 
- - npm init
+ - npm install
 
-Vous pouvez désormais lancer votre serveur !
+Vous pouvez désormais lancer votre serveur local !
 
 
-Url : https://miguel-novoa.github.io/DM2-1_Projet-1_Bug_Tracker/
+Dépot git : https://github.com/Miguel-Novoa/DM2-1_Projet-1_Bug_Tracker

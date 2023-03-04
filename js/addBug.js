@@ -1,4 +1,3 @@
-const url = 'http://127.0.0.1:5500';
 const user = JSON.parse(localStorage.getItem('user'));
 const title = document.getElementById('titleInput');
 const description = document.getElementById('descriptionInput');
@@ -23,7 +22,7 @@ const postBug = () =>{
                 'Le bug a bien été ajouté à la liste !',
                 'success'
             ).then(()=>{
-                window.location.href = `${url}/pages/todo.html`;
+                window.location.href = `/pages/todo.html`;
             });
         };
     })

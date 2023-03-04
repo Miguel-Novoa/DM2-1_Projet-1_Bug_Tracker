@@ -1,7 +1,6 @@
 import { changeBugState } from "./changeBugState.js";
 import { deleteBug } from "./deleteBug.js";
 
-const url = 'http://127.0.0.1:5500';
 const user = JSON.parse(localStorage.getItem('user'));
 const table = document.querySelector('tbody');
 const title = document.getElementById('tableTitle');
@@ -30,9 +29,9 @@ const convertTimestampToDate = (time) =>{
 };
 
 const locationHandler = () =>{
-    if(window.location.href === `${url}/pages/bugsList.html`){
+    if(window.location.href.indexOf(`/pages/bugsList.html`) > -1){
         return 0;
-    }else if(window.location.href === `${url}/pages/todo.html`){
+    }else if(window.location.href.indexOf(`/pages/todo.html`) > -1){
         return user.id;
     };
 };
@@ -97,7 +96,6 @@ const displayTable = ()=>{
 fetch(`http://greenvelvet.alwaysdata.net/bugTracker/api/users/${user.token}`)
 .then((res)=>res.json())
 .then((response) =>{
-    console.log(response)
     devs = response.result.user;
     if(locationHandler() === 0){
         title.innerHTML = `Liste complete des bugs`;

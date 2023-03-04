@@ -1,5 +1,3 @@
-const url = 'http://127.0.0.1:5500';
-
 const loginBtn = document.getElementById('loginBtn');
 const username = document.getElementById('username');
 const password = document.getElementById('password');
@@ -19,7 +17,7 @@ loginBtn.addEventListener('click', (e)=>{
                 "token" : response.result.token
             }));
 
-            window.location.href = `${url}/pages/bugsList.html`;
+            window.location.href = `/pages/bugsList.html`;
 
         }else if(response.result.status === 'failure'){
             alert.innerHTML = `Le nom d'utilisateur ou le mot de passe est incorrect !`;
