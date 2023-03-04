@@ -8,4 +8,4 @@ Avant de lancer votre serveur local, il faut installer les dépendances. Pour se
 Vous pouvez désormais lancer votre serveur local !
 
 
-Dépot git : https://github.com/Miguel-Novoa/DM2-1_Projet-1_Bug_Tracker
+Url : https://miguel-novoa.github.io/DM2-1_Projet-1_Bug_Tracker/
