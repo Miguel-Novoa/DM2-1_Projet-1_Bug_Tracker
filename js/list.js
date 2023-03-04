@@ -9,7 +9,7 @@ const title = document.getElementById('tableTitle');
 let devs;
 
 
-const manageBugState = (state, name)=>{
+const manageBugState = (state)=>{
     if(state === "0"){
         return `<option selected value='0'>Non traité</option>
                     <option value='1'>En cours</option>
@@ -26,8 +26,7 @@ const manageBugState = (state, name)=>{
 };
 
 const convertTimestampToDate = (time) =>{
-    console.log(time)
-    return new Date(time).toLocaleDateString('fr-fr');
+    return new Date(time*1000).toLocaleDateString();
 };
 
 const locationHandler = () =>{

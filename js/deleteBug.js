@@ -11,5 +11,7 @@ export function deleteBug (token, bugId){
                 window.location.reload();
             });
         };
+    }).catch((error)=>{
+        console.log(error)
     });
 };

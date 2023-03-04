@@ -29,7 +29,6 @@ loginBtn.addEventListener('click', (e)=>{
             alert.innerHTML = `Veuillez entrer votre mot de passe !`;
             alert.style.display = 'block';
         }
-        console.log(response);
     })
     .catch((error)=>{
         console.log(error)
